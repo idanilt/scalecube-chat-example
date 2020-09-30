@@ -1,0 +1,20 @@
+{
+  "name": "@scalecube-chat-example/backend",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@scalecube-chat-example/api": "1.0.0",
+    "@scalecube/node": "^0.2.9",
+    "@scalecube/rsocket-ws-gateway": "^0.2.9",
+    "nodemon": "^2.0.4",
+    "rxjs": "^6.6.3",
+    "ts-node": "^9.0.0",
+    "tsmon": "^0.7.0",
+    "typescript": "^4.0.3"
+  }
+}

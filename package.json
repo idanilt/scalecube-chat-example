@@ -1,0 +1,12 @@
+{
+  "name": "@scalecube-chat-example/workspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:idanilt/scalecube-chat-example.git",
+  "author": "IdanILT <idan@ilt.co.il>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

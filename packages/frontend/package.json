@@ -1,0 +1,13 @@
+{
+  "name": "@scalecube-chat-example/frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "dependencies": {
+    "@scalecube-chat-example/api": "1.0.0",
+    "parcel": "^1.12.4"
+  }
+}
