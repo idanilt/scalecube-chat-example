@@ -30,7 +30,7 @@ create$
 ch$
     .pipe(
         tap(() => value('chat', '')),
-        switchMap(() => chatService.messages$({channel: value('channel-list')})),
+        switchMap(() => chatService.messages$({ch: value('channel-list')})),
         tap(msg => value('chat', value('chat') + '\n' + msg.message))
     )
     .subscribe();
@@ -39,14 +39,7 @@ msg$
     .pipe(
         map(() => ({ch: value('channel-list'), msg: value('message', '')})),
         filter( i => i.ch && i.msg ),
-        tap(i => chatService.message({
-            header: {
-                channel: i.ch,
-                timestamp: Date.now(),
-                type: "text"
-            },
-            message: i.msg
-        }))
+        tap(i => chatService.message(i))
     )
     .subscribe();
 

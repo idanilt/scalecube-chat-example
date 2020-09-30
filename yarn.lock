@@ -941,6 +941,26 @@
   resolved "https://registry.yarnpkg.com/@scalecube/api/-/api-0.2.9.tgz#e0346e7f76186bdaecaa71292f7b20058d91b3bd"
   integrity sha512-ohHroXNNju5vxq6SBmkmbpfVH4AattITz2x0gLKmsnlgJ1bJyEoTWk0YNcnBhCwl3zWIPnP/l0RvnoCllcMErQ==
 
+"@scalecube/browser@^0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@scalecube/browser/-/browser-0.2.9.tgz#fae33b7ea35572d10ed5ca87f4b6c2c1cf3479ca"
+  integrity sha512-/TSBPWIZrOQC2uYq1Sjc/eo2148dKm/n0+yyoYtkgmck4Im640WdkqBCd6sf26AmVHusANXhU87ZJxIBH0N1ng==
+  dependencies:
+    "@scalecube/cluster-browser" "^0.2.9"
+    "@scalecube/routers" "^0.2.9"
+    "@scalecube/scalecube-microservice" "^0.2.9"
+    "@scalecube/transport-browser" "^0.2.9"
+    "@scalecube/utils" "^0.2.9"
+    rxjs "^6.4.0"
+
+"@scalecube/cluster-browser@^0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@scalecube/cluster-browser/-/cluster-browser-0.2.9.tgz#33d1f5a3b1352ba85b07cc3a6614693f94b44d11"
+  integrity sha512-GevKXbMlAM3G3wk98JzY0FTTGTIU8gvIdZ1MBvL4lq4pTYic9Z1pYnCnfCvPjPdnuvyBB98Zd2ZlPQBNzCIntw==
+  dependencies:
+    "@scalecube/utils" "^0.2.9"
+    rxjs "^6.4.0"
+
 "@scalecube/cluster-nodejs@^0.2.9":
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/@scalecube/cluster-nodejs/-/cluster-nodejs-0.2.9.tgz#1e21ce0e626336486ffa2812cae6fbcb3d7a9f2f"
@@ -1008,6 +1028,17 @@
     "@scalecube/scalecube-discovery" "^0.2.9"
     "@scalecube/utils" "^0.2.9"
     rxjs "^6.4.0"
+
+"@scalecube/transport-browser@^0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@scalecube/transport-browser/-/transport-browser-0.2.9.tgz#bb785ee99a700249ec8cb47d6f2c9d99d112a63b"
+  integrity sha512-XXi/hL69OV+qI+0OrL0+IWhd9DqWJ5RHVUzXbhq+Ci6mJBVuLsCMeQYcQq19D592WV2D5BD47RmlQzW3JVIEfA==
+  dependencies:
+    "@scalecube/rsocket-adapter" "^0.2.9"
+    "@scalecube/utils" "^0.2.9"
+    rsocket-core "^0.0.16"
+    rsocket-events-client "^0.0.22"
+    rsocket-events-server "^0.0.22"
 
 "@scalecube/transport-nodejs@^0.2.9":
   version "0.2.9"
@@ -1952,6 +1983,11 @@ core-js-compat@^3.6.2:
     browserslist "^4.8.5"
     semver "7.0.0"
 
+core-js@^1.0.0:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
+  integrity sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
+
 core-js@^2.4.0, core-js@^2.4.1, core-js@^2.6.5:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.11.tgz#38831469f9922bded8ee21c9dc46985e0399308c"
@@ -2750,6 +2786,19 @@ fbjs-css-vars@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/fbjs-css-vars/-/fbjs-css-vars-1.0.2.tgz#216551136ae02fe255932c3ec8775f18e2c078b8"
   integrity sha512-b2XGFAFdWZWg0phtAWLHCk836A1Xann+I+Dgd3Gk64MHKZO44FfoD1KxyvbSh0qZsIoXQGGlVztIY+oitJPpRQ==
+
+fbjs@^0.8.12:
+  version "0.8.17"
+  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
+  integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
+  dependencies:
+    core-js "^1.0.0"
+    isomorphic-fetch "^2.1.1"
+    loose-envify "^1.0.0"
+    object-assign "^4.1.0"
+    promise "^7.1.1"
+    setimmediate "^1.0.5"
+    ua-parser-js "^0.7.18"
 
 fbjs@^1.0.0:
   version "1.0.0"
@@ -5334,6 +5383,35 @@ rsocket-core@^0.0.16:
   integrity sha512-mzA5yhSxO5BaAGqpaTzmZBhQD/Ig2Uez/I2KTYGQu8fGlzYhyCv+QHmt9dQ4qkGu1bqBkR/nSD6NtyY/CIfGgw==
   dependencies:
     fbjs "^1.0.0"
+    rsocket-flowable "^0.0.14"
+    rsocket-types "^0.0.16"
+
+rsocket-events-client@^0.0.21:
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/rsocket-events-client/-/rsocket-events-client-0.0.21.tgz#61f9de7584a7b8cdb7f320b0e5ba3a02b644805f"
+  integrity sha512-BX9xeqRGjVt9/xakUuxXvOelKJRTlBhuIBFzKPjJ6YobJplV4mtmmnqWqaO/SU71A+G2OdQ4KN+ZR2jfFvwOkQ==
+  dependencies:
+    fbjs "^0.8.12"
+    rsocket-flowable "^0.0.14"
+    rsocket-types "^0.0.16"
+
+rsocket-events-client@^0.0.22:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/rsocket-events-client/-/rsocket-events-client-0.0.22.tgz#6d31e17c896d4ad624aa983f2b3815ff6f6ff593"
+  integrity sha512-f1Y3PqG1BsJbqM1rUie+1Gt4pz5vHHYUztPys3lfbRNVBS7mh9SGghqfLRAPN6hIcqpUNTPPdKcP9/iXW5w+jA==
+  dependencies:
+    fbjs "^0.8.12"
+    rsocket-flowable "^0.0.14"
+    rsocket-types "^0.0.16"
+
+rsocket-events-server@^0.0.22:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/rsocket-events-server/-/rsocket-events-server-0.0.22.tgz#8b42415a7e96157b331d18a83287807aa956de04"
+  integrity sha512-4dAdZU4EUC5QMUmRoQ26XXQ7ZnCgtHb0qOOvGYKrGPiHXRG9P6ax7Nlm8D3dzGLXMTLudkRHAzeLFEogMqFvww==
+  dependencies:
+    fbjs "^0.8.12"
+    rsocket-core "^0.0.16"
+    rsocket-events-client "^0.0.21"
     rsocket-flowable "^0.0.14"
     rsocket-types "^0.0.16"
 

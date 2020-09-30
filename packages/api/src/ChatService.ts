@@ -26,6 +26,7 @@ export type MessageResponse = void;
 
 export interface Messages$Request {
     channel: string;
+    from?: number;
 }
 
 export interface ChatService {

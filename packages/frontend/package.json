@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@scalecube-chat-example/api": "1.0.0",
+    "@scalecube/browser": "^0.2.9",
     "parcel": "^1.12.4",
     "rxjs": "^6.6.3"
   },

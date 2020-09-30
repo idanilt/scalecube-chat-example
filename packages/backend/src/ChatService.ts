@@ -1,5 +1,6 @@
 import {ChatServiceAPI} from '@scalecube-chat-example/api';
 import { Subject, from, concat } from 'rxjs';
+import {filter} from "rxjs/operators";
 const channels: ChatServiceAPI.Channel[] = [];
 const channels$ = new Subject<ChatServiceAPI.Channel>();
 const messages: {[ch:string]: {ts: number, message: string}[]} = {};
@@ -30,6 +31,7 @@ export class ChatService implements ChatServiceAPI.ChatService{
         });
     }
     messages$(req: ChatServiceAPI.Messages$Request){
-        return concat(from(messages[req.channel]), messages$[req.channel]);
+        return concat(from(messages[req.channel]), messages$[req.channel])
+            .pipe(filter(i => !req.from || i.ts > req.from));
     }
 }
