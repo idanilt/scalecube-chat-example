@@ -13,62 +13,9 @@
 <button id="create">create</button>
 <textarea id="chat" style="width: 100%; height: 200px"></textarea>
 <input id="message" style="width: 100%" type="text">
+<script src="app.ts"></script>
 <script>
-    document.getElementById('create').addEventListener('click', ()=>{
-        if( !document.getElementById('new').value ) {
-            return ;
-        }
-        window.ChatService.createChannel({topic:document.getElementById('new').value})
-        document.getElementById('new').value = '';
-    })
-    let m$;
-    document.getElementById('channel-list').addEventListener('change', ()=>{
-        document.getElementById('chat').value = '';
-        if(m$){
-            m$.unsubscribe();
-        }
-        m$ = window
-            .ChatService
-            .messages$({channel: document.getElementById('channel-list').value})
-            .subscribe( msg => document.getElementById('chat').value += '\n' + msg.message )
-    });
-    document.getElementById('message').addEventListener('keypress', message);
-    function message(e){
-        if( e.code !== "Enter"  ){
-            return ;
-        }
-        const msg = document.getElementById('message').value;
-        const ch = document.getElementById('channel-list').value;
-        if( !msg || !ch ){
-            return ;
-        }
-        window.ChatService.message({
-            header: {
-                channel: ch
-            },
-            message: msg
-        });
-        document.getElementById('message').value = '';
-    }
-    function onReady(){
-        window
-            .ChatService
-            .channels$()
-            .subscribe(
-                ch => document
-                    .getElementById('channel-list')
-                    .insertAdjacentHTML('beforeend', `<option value="${ch.id}">${ch.topic}</option>`)
-            )
-    }
-    function isReady(){
-        if( window.ChatService !== undefined ){
-            return onReady();
-        }
-        else {
-            setTimeout(isReady, 0);
-        }
-    }
-    isReady();
+
 </script>
 </body>
 </html>

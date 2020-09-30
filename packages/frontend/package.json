@@ -8,6 +8,12 @@
   },
   "dependencies": {
     "@scalecube-chat-example/api": "1.0.0",
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "rxjs": "^6.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-syntax-top-level-await": "^7.10.4",
+    "@babel/preset-modules": "^0.1.4"
   }
 }
